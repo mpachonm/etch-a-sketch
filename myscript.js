@@ -1,7 +1,12 @@
 const container = document.getElementById("container");
 
 function changeBackgroundColor(){
-    this.style.backgroundColor='yellow';
+    let color = [];
+  for (let i = 0; i < 3; i++) {
+    color.push(Math.floor(Math.random() * 256));
+  }
+  
+    this.style.backgroundColor='rgb(' + color.join(', ') + ')';
     };
 
 function makeGrid(rows,columns){
